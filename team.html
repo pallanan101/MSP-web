@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIGS | THE TEAM & PARTNERS</title>
+    <link rel="icon" href="resource/favicon.ico" type="image/x-icon">
+    <link href="output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@300;400;600;700;900&family=Space+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        .font-archivo {
+            font-family: 'Archivo Black', sans-serif;
+        }
+
+        .font-mono {
+            font-family: 'Space Mono', monospace;
+        }
+
+        .blueprint-bg {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* PARALLAX ENGINE */
+        .parallax-section {
+            position: relative;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            clip-path: inset(0 0 0 0); /* This creates the fixed background window effect */
+        }
+
+        .carousel-engine {
+            position: fixed;
+            inset: 0;
+            height: 100vh;
+            width: 100%;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            filter: blur(10px);
+            transition: opacity 1.5s ease-in-out, filter 1.5s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+
+            .slide.active {
+                opacity: 0.4; /* Adjusted for readability of glass cards */
+                filter: blur(0px);
+            }
+
+        .spec-section {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f0e47',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="blueprint-bg font-['Poppins'] text-primary overflow-x-hidden bg-white/10">
+
+    <nav class="fixed top-0 left-0 w-full z-[100] flex justify-between items-start p-6 md:p-12 pointer-events-none">
+        <a href="index.html" class="pointer-events-auto">
+            <img src="resource/migslogo.png" alt="Logo" class="h-20 w-auto object-contain">
+        </a>
+        <div class="flex gap-6 text-[10px] uppercase tracking-[0.4em] font-bold text-black/60 pointer-events-auto mt-4 bg-white/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/20">
+            <a href="index.html" class="hover:text-black">Home</a>
+            <a href="projects.html" class="hover:text-black">Work</a>
+            <a href="team.html" class="text-black border-b border-black">The Team</a>
+            <a href="services.html" class="hover:text-black">Services</a>
+            <a href="contact.html" class="hover:text-black">Contact</a>
+        </div>
+    </nav>
+
+    <div class="flex flex-col md:flex-row min-h-screen">
+
+        <aside class="hidden md:flex sidebar-container w-[450px] max-w-[40vw] h-screen sticky top-0 bg-white/30 backdrop-blur-lg z-50 border-r border-gray-100 p-16 flex-col justify-center">
+            <span class="text-[10px] text-black/40 tracking-[0.5em] font-bold uppercase mb-4 block">02</span>
+            <h1 class="font-archivo text-4xl md:text-[3.5vw] leading-[0.85] uppercase mb-6">The<br>Core<br>Team</h1>
+            <p class="text-[11px] uppercase tracking-[0.2em] leading-relaxed text-black/60">
+                Redefining luxury event production through the lens of architectural styling and lighting.
+            </p>
+        </aside>
+
+        <main class="flex-1">
+
+            <section class="spec-section pt-48 pb-24 px-12 md:px-20 relative z-20">
+                <div class="max-w-xl">
+                    <h2 class="font-archivo text-3xl uppercase mb-8">Behind the Vision</h2>
+                    <div class="space-y-12 text-[12px]  text-black/70">
+                        <p>Our team merges editorial flair with technical precision. Every project is a collaboration between visionaries who understand that light and texture are the foundation of emotion.</p>
+                        <div class="grid grid-cols-1 gap-10">
+                            <div>
+                                <h4 class="font-bold text-black mb-2 text-[11px] ">THE CREW</h4>
+                                <p class="text-black/50">Technical artists specializing in large-scale installations and seamless logistics.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black mb-2 text-[11px] ">STYLISTS</h4>
+                                <p class="text-black/50">Curators of the fine details, managing every element from textiles to floral architecture.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="bg-white px-12 md:px-20 py-12 border-t border-black/5 relative z-20">
+                <h2 class="font-archivo text-4xl md:text-6xl uppercase tracking-tighter">Collaborations</h2>
+                <div class="w-20 h-2 bg-black mt-4"></div>
+            </div>
+
+            <section class="parallax-section">
+                <div class="carousel-engine">
+                    <div class="slide active" style="background-image: url('resource/espera1.jpg');"></div>
+                    <div class="slide" style="background-image: url('resource/espera2.jpg');"></div>
+                    <div class="slide" style="background-image: url('resource/espera3.jpg');"></div>
+                </div>
+                <div class="relative z-10 bg-white/50 backdrop-blur-xl p-8 md:p-12 max-w-lg mx-12 md:mx-20 rounded-[32px] shadow-2xl border border-white/30">
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-6">
+                        <img src="resource/partner1.jpg" alt="REEMS" class="h-20 w-20 object-contain rounded-xl">
+                        <div>
+                            <h3 class="font-archivo text-2xl uppercase">REEMS</h3>
+                            <p class="font-bold text-[9px] tracking-widest text-black/40 uppercase">Luxury Planning & Styling</p>
+                        </div>
+                    </div>
+                    <p class="text-[11px] uppercase tracking-[0.1em] leading-relaxed text-black/70">
+                        Specializes in luxury wedding planning and coordination in the Philippines, delivering world-class execution for high-end celebrations.
+                    </p>
+                </div>
+            </section>
+
+            <section class="parallax-section justify-end">
+                <div class="carousel-engine">
+                    <div class="slide active" style="background-image: url('resource/tpm1.jpg');"></div>
+                    <div class="slide" style="background-image: url('resource/tpm2.jpg');"></div>
+                    <div class="slide" style="background-image: url('resource/tpm3.jpg');"></div>
+                </div>
+                <div class="relative z-10 bg-white/50 backdrop-blur-xl p-8 md:p-12 max-w-lg mx-12 md:mx-20 rounded-[32px] shadow-2xl border border-white/30">
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-6">
+                        <img src="resource/partner2.jpg" alt="TPM" class="h-20 w-20 object-contain rounded-xl">
+                        <div>
+                            <h3 class="font-archivo text-2xl uppercase">The Perfect Match</h3>
+                            <p class="font-bold text-[9px] tracking-widest text-black/40 uppercase">Bridal Events & Coordination</p>
+                        </div>
+                    </div>
+                    <p class="text-[11px] uppercase tracking-[0.1em] leading-relaxed text-black/70">
+                        Translating love stories into intentional experiences through creative concepts and heartfelt execution.
+                    </p>
+                </div>
+            </section>
+
+            <section class="parallax-section">
+                <div class="carousel-engine">
+                    <div class="slide active" style="background-image: url('resource/dae1.jpg');"></div>
+                    <div class="slide" style="background-image: url('resource/dae2.jpg');"></div>
+                    <div class="slide" style="background-image: url('resource/dae3.jpg');"></div>
+                </div>
+                <div class="relative z-10 bg-white/50 backdrop-blur-xl p-8 md:p-12 max-w-lg mx-12 md:mx-20 rounded-[32px] shadow-2xl border border-white/30">
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-6">
+                        <img src="resource/partner3.jpg" alt="D&A Empire" class="h-20 w-20 object-contain rounded-xl">
+                        <div>
+                            <h3 class="font-archivo text-2xl uppercase">D&A Empire</h3>
+                            <p class="font-bold text-[9px] tracking-widest text-black/40 uppercase">Concept and Events</p>
+                        </div>
+                    </div>
+                    <p class="text-[11px] uppercase tracking-[0.1em] leading-relaxed text-black/70">
+                        D&A Empire Concept and Events is created to give HAPPINESS a real sense and MOMENTS with true colors. 💕✨
+                    </p>
+                </div>
+            </section>
+
+            <section class="parallax-section justify-end">
+                <div class="carousel-engine">
+                    <div class="slide active" style="background-image: url('resource/rce1.jpg');"></div>
+                    <div class="slide" style="background-image: url('resource/rce2.jpg');"></div>
+                    <div class="slide" style="background-image: url('resource/rce3.jpg');"></div>
+                </div>
+                <div class="relative z-10 bg-white/50 backdrop-blur-xl p-8 md:p-12 max-w-lg mx-12 md:mx-20 rounded-[32px] shadow-2xl border border-white/30">
+                    <div class="flex flex-col md:flex-row items-start md:items-center gap-6 mb-6">
+                        <img src="resource/partner4.jpg" alt="The Royal" class="h-20 w-20 object-contain rounded-xl">
+                        <div>
+                            <h3 class="font-archivo text-2xl uppercase">The Royal</h3>
+                            <p class="font-bold text-[9px] tracking-widest text-black/40 uppercase">Creative Events</p>
+                        </div>
+                    </div>
+                    <p class="text-[11px] uppercase tracking-[0.1em] leading-relaxed text-black/70">
+                        Your trust inspires us to deliver our best for every event.
+                    </p>
+                </div>
+            </section>
+
+            <section class="brand-finale bg-neutral-900 text-white p-12 md:p-24 relative z-20">
+                <div class="max-w-2xl">
+                    <span class="text-[10px] tracking-[0.8em] text-white/40 uppercase mb-8 block font-mono">Migs Styling Production</span>
+                    <h2 class="font-archivo text-4xl md:text-6xl uppercase leading-[0.9] mb-12">Where grand visions<br> meet intimate details.</h2>
+                    <p class="text-[14px] leading-loose text-white/60 mb-12 font-poppins">
+                        While we pride ourselves on our partnerships with the best coordinators in the industry, our core strength lies in the hands of our crew. From the placement of the first bloom to the glow of the final chandelier, Migs Styling Production remains the architect of your atmosphere.
+                    </p>
+                    <a href="contact.html" class="inline-block border border-white/20 px-8 py-4 text-[10px] tracking-[0.5em] uppercase hover:bg-white hover:text-black transition-all">Book an Event</a>
+                </div>
+            </section>
+
+            <footer class="bg-white p-12 md:p-24 border-t border-black/5 relative z-20">
+                <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                    <div class="max-w-xs">
+                        <img src="resource/migslogo.png" alt="Logo" class="h-12 mb-6">
+                        <p class="text-[10px] uppercase tracking-widest text-black/40 leading-relaxed">Creating immersive environments for the modern metropolitan celebration.</p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-16">
+                        <div>
+                            <h5 class="text-[11px] font-bold tracking-widest mb-6">CONNECT</h5>
+                            <ul class="text-[10px] space-y-4 text-black/50 uppercase tracking-widest font-mono">
+                                <li><a href="#" class="hover:text-black transition-colors">Instagram</a></li>
+                                <li><a href="#" class="hover:text-black transition-colors">Facebook</a></li>
+                                <li><a href="contact.html" class="hover:text-black transition-colors">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="text-[11px] font-bold tracking-widest mb-6">PAGES</h5>
+                            <ul class="text-[10px] space-y-4 text-black/50 uppercase tracking-widest font-mono">
+                                <li><a href="terms.html" class="hover:text-black transition-colors">Terms</a></li>
+                                <li><a href="privacy.html" class="hover:text-black transition-colors">Privacy</a></li>
+                                <li><a href="cookies.html" class="hover:text-black transition-colors">Cookies</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-24 pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <span class="text-[9px] text-black/30 uppercase tracking-[0.4em]">© 2026 Migs Styling Production. All Rights Reserved.</span>
+                    <span class="text-[9px] text-black/30 uppercase tracking-[0.4em]">Built for the Extraordinary.</span>
+                </div>
+            </footer>
+
+        </main>
+    </div>
+
+    <script>
+        // PARALLAX CAROUSEL ENGINE
+        document.querySelectorAll('.parallax-section').forEach(section => {
+            let current = 0;
+            const slides = section.querySelectorAll('.slide');
+            if (slides.length > 1) {
+                setInterval(() => {
+                    slides[current].classList.remove('active');
+                    current = (current + 1) % slides.length;
+                    slides[current].classList.add('active');
+                }, 4500); // 4.5 seconds per slide transition
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIGS | WORK</title>
+    <link rel="icon" href="resource/favicon.ico" type="image/x-icon">
+    <link href="output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        archivo: ['Archivo Black', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            color: #0f0e47;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            background: white;
+        }
+
+        .font-garamond {
+         font-family: "Cormorant Garamond", serif;
+         font-optical-sizing: auto;
+         font-style: normal;
+        }
+
+        .font-archivo {
+            font-family: 'Archivo Black', sans-serif;
+        }
+
+        .parent-carousel {
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .project-section {
+            flex: 0 0 100vw;
+            height: 100vh;
+            display: flex;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            position: relative;
+        }
+
+            .project-section.is-active {
+                opacity: 1;
+            }
+
+        /* GLASS SIDEBAR: Responsive Widths */
+        .glass-sidebar {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-right: 1px solid rgba(0, 0, 0, 0.05);
+            width: 400px;
+            max-width: 45vw;
+            min-width: 320px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3rem;
+            z-index: 50;
+            transition: all 0.5s ease;
+        }
+
+        /* MOBILE FIX: Adjust sidebar for Portrait screens */
+        @media (max-width: 768px) and (orientation: portrait) {
+            .glass-sidebar {
+                width: 100% !important;
+                max-width: 100% !important;
+                height: 40%;
+                position: absolute;
+                bottom: 0;
+                border-right: none;
+                border-top: 1px solid rgba(0,0,0,0.1);
+            }
+
+            .project-info h2 {
+                font-size: 8vw !important;
+            }
+        }
+
+        /* IMAGE HANDLING: Fixed Stretching */
+        .child-carousel {
+            position: absolute;
+            inset: 0;
+            z-index: 10;
+        }
+
+        .photo-slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1), transform 3s ease-out;
+            transform: scale(1.1);
+            overflow: hidden;
+        }
+
+            .photo-slide.active-slide {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            /* CRITICAL FIX: The object-fit cover prevents stretching */
+            .photo-slide video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover; /* Keeps aspect ratio intact */
+                object-position: center;
+            }
+
+        .project-info {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.19, 1, 0.22, 1) 0.4s;
+        }
+
+        .is-active .project-info {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="relative text-black">
+
+    <nav class="absolute top-0 left-0 w-full z-[100] flex justify-between items-start p-6 md:p-12 pointer-events-none">
+        <a href="index.html" class="pointer-events-auto">
+            <img src="resource/migslogo.png" alt="Logo" style="height: 5rem;" class="w-auto object-contain">
+        </a>
+        <div class="flex gap-6 text-[9px] md:text-[10px] uppercase tracking-[0.4em] font-bold text-black/60 pointer-events-auto mt-4 bg-white/40 backdrop-blur-md px-5 py-3 rounded-full border border-white/20 shadow-sm">
+            <a href="index.html" class="hover:text-black transition">Home</a>
+            <a href="projects.html" class="text-black border-b border-black">Work</a>
+
+            <a href="team.html" class="hover:text-black transition">The Team</a>
+            <a href="services.html" class="hover:text-black transition">Services</a>
+            <a href="contact.html" class="hover:text-black transition">Contact</a>
+        </div>
+    </nav>
+
+    <div class="parent-carousel" id="parentCarousel">
+
+        <section class="project-section is-active" data-index="1">
+            <aside class="glass-sidebar">
+                <div class="project-info">
+                    <span class="text-[10px] text-black/40 tracking-[0.5em] font-bold uppercase mb-4 block">01</span>
+                    <h2 class="font-garamond  text-4xl md:text-[3.5vw] leading-[0.85] uppercase mb-6">Le<br>Parc</h2>
+                    <p class="text-[14px] text-black/70 mb-8 max-w-[280px]">A breathtaking transformation featuring a sea of crimson florals and a ceiling dripping with crystal chandeliers. The couple was absolutely floored by this reveal—a perfect blend of golden warmth and bold romance. Every corner of the hall was designed to feel like a high-end dream, creating an atmosphere that’s as vibrant as it is unforgettable.</p>
+                    <button onclick="moveProject(1)" class="w-12 h-12 border border-black/10 rounded-full hover:bg-black hover:text-white transition-all shadow-lg bg-white/80 flex items-center justify-center font-bold">→</button>
+                </div>
+            </aside>
+            <div class="child-carousel">
+                <div class="photo-slide active-slide"><video src="resource/car1img1.mp4" autoplay muted loop playsinline></video></div>
+                <div class="photo-slide"><video src="resource/car1img2.mp4" autoplay muted loop playsinline></video></div>
+                </div>
+        </section>
+
+        <section class="project-section" data-index="2">
+            <aside class="glass-sidebar">
+                <div class="project-info">
+                    <span class="text-[10px] text-black/40 tracking-[0.5em] font-bold uppercase mb-4 block">02</span>
+                    <h2 class="font-garamond text-4xl md:text-[3.5vw] leading-[0.85] uppercase mb-6">Baguio<br>Country Club</h2>
+                    <p class="text-[14px] text-black/70 mb-8 max-w-[280px]">The ultimate white-on-white flex. We turned the club into a cloud-like sanctuary with flowing drapes and crisp white blooms. The couple was obsessed with how the cinematic blue beams hit the crystal chandeliers, creating a fresh, modern magic that feels like stepping into a dream.</p>
+                    <div class="flex gap-4">
+                        <button onclick="moveProject(-1)" class="w-12 h-12 border border-black/10 rounded-full hover:bg-black hover:text-white transition-all shadow-lg bg-white/80 flex items-center justify-center font-bold">←</button>
+                        <button onclick="moveProject(1)" class="w-12 h-12 border border-black/10 rounded-full hover:bg-black hover:text-white transition-all shadow-lg bg-white/80 flex items-center justify-center font-bold">→</button>
+                    </div>
+                </div>
+            </aside>
+            <div class="child-carousel">
+                <div class="photo-slide active-slide"><video src="resource/car2img1.mp4" autoplay muted loop playsinline></video></div>
+                   </div>
+        </section>
+
+        <section class="project-section" data-index="3">
+            <aside class="glass-sidebar">
+                <div class="project-info">
+                    <span class="text-[10px] text-black/40 tracking-[0.5em] font-bold uppercase mb-4 block">03</span>
+                    <h2 class="font-garamond text-4xl md:text-[3.5vw] leading-[0.85] uppercase mb-6">Starry<br>Enderun</h2>
+                    <p class="text-[14px] text-black/70 mb-8 max-w-[280px]">Step into a limitless midnight sky. Deep navy fabrics and endless trails of cascading fairy lights mimic the cosmos, giving the entire room an electric, starlit glow. It's a deeply immersive, galactic experience that completely rewrites the venue's architecture.</p>
+                    <div class="flex gap-4">
+                        <button onclick="moveProject(-1)" class="w-12 h-12 border border-black/10 rounded-full hover:bg-black hover:text-white transition-all shadow-lg bg-white/80 flex items-center justify-center font-bold">←</button>
+                        <button onclick="moveProject(1)" class="w-12 h-12 border border-black/10 rounded-full hover:bg-black hover:text-white transition-all shadow-lg bg-white/80 flex items-center justify-center font-bold">→</button>
+                    </div>
+                </div>
+            </aside>
+            <div class="child-carousel">
+                <div class="photo-slide active-slide"><video src="resource/car3img1.mp4" autoplay muted loop playsinline></video></div>
+            </div>
+        </section>
+
+        <section class="project-section" data-index="4">
+            <aside class="glass-sidebar">
+                <div class="project-info">
+                    <span class="text-[10px] text-black/40 tracking-[0.5em] font-bold uppercase mb-4 block">04</span>
+                    <h2 class="font-garamond text-4xl md:text-[3.5vw] leading-[0.85] uppercase mb-6">Grand<br>Cobo</h2>
+                    <p class="text-[14px] text-black/70 mb-8 max-w-[280px]">Pure fairy-tale magic. We flipped the venue into an enchanted forest dripping with cascading vines and lush, vibrant greenery. The couple walked into an absolute fantasy, complete with a sprawling botanical canopy and soft, glowing lights. It’s a wild, organic setup that completely blurs the line between an indoor hall and a magical garden reveal.</p>
+                    <div class="flex gap-4">
+                        <button onclick="moveProject(-1)" class="w-12 h-12 border border-black/10 rounded-full hover:bg-black hover:text-white transition-all shadow-lg bg-white/80 flex items-center justify-center font-bold">←</button>
+                        <button onclick="moveProject(1)" class="w-12 h-12 border border-black/10 rounded-full hover:bg-black hover:text-white transition-all shadow-lg bg-white/80 flex items-center justify-center font-bold">→</button>
+                    </div>
+                </div>
+            </aside>
+            <div class="child-carousel">
+                <div class="photo-slide active-slide"><video src="resource/car4img1.mp4" autoplay muted loop playsinline></video></div>
+               
+            </div>
+        </section>
+
+        <section class="project-section" data-index="5">
+            <aside class="glass-sidebar">
+                <div class="project-info">
+                    <span class="text-[10px] text-black/40 tracking-[0.5em] font-bold uppercase mb-4 block">05</span>
+                    <h2 class="font-garamond text-4xl md:text-[3.5vw] leading-[0.85] uppercase mb-6">Rosy<br>Windsong</h2>
+                    <p class="text-[14px] text-black/70 mb-8 max-w-[280px]">A total pink floral takeover. We completely flipped the venue into a vibrant sea of blush and soft pink blooms, perfectly balanced with crisp white accents. The couple walked into an absolute dream—a lush, romantic canopy that brings fresh, high-energy elegance to the room. It’s a breathtaking setup that feels exactly like stepping into an endless spring garden.</p>
+                    <div class="flex gap-4">
+                        <button onclick="moveProject(-1)" class="w-12 h-12 border border-black/10 rounded-full hover:bg-black hover:text-white transition-all shadow-lg bg-white/80 flex items-center justify-center font-bold">←</button>
+                    </div>
+                </div>
+            </aside>
+            <div class="child-carousel">
+                <div class="photo-slide active-slide"><video src="resource/car5img1.mp4" autoplay muted loop playsinline></video></div>
+                 </div>
+        </section>
+
+    </div>
+
+    <footer class="absolute bottom-0 left-0 w-full z-[100] flex justify-between items-end p-8 md:p-12 pointer-events-none">
+        <div class="flex flex-col gap-3 pointer-events-auto bg-white/20 backdrop-blur-sm px-4 py-3 rounded-xl border border-white/10">
+            <div class="w-32 h-[1px] bg-black/10 relative overflow-hidden">
+                <div id="progressBar" class="absolute top-0 left-0 h-full bg-black transition-all duration-1000" style="width: 20%;"></div>
+            </div>
+            <span id="counter" class="text-[9px] font-bold tracking-[0.4em] text-black">01 / 05</span>
+        </div>
+    </footer>
+
+    <script>
+        let currentProject = 0;
+        const totalProjects = 5;
+        const parent = document.getElementById('parentCarousel');
+
+        function moveProject(dir) {
+            currentProject = Math.max(0, Math.min(totalProjects - 1, currentProject + dir));
+            parent.scrollTo({ left: currentProject * window.innerWidth, behavior: 'smooth' });
+
+            const sections = document.querySelectorAll('.project-section');
+            sections.forEach((sec, i) => {
+                if (i === currentProject) sec.classList.add('is-active');
+                else sec.classList.remove('is-active');
+            });
+
+            document.getElementById('progressBar').style.width = `${((currentProject + 1) / totalProjects) * 100}%`;
+            document.getElementById('counter').innerText = `0${currentProject + 1} / 05`;
+        }
+
+        document.querySelectorAll('.project-section').forEach(section => {
+            let slideIndex = 0;
+            const slides = section.querySelectorAll('.photo-slide');
+            if (slides.length > 1) {
+                setInterval(() => {
+                    slides[slideIndex].classList.remove('active-slide');
+                    slideIndex = (slideIndex + 1) % slides.length;
+                    slides[slideIndex].classList.add('active-slide');
+                }, 10000);
+            }
+        });
+
+        window.addEventListener('resize', () => {
+            parent.scrollTo({ left: currentProject * window.innerWidth, behavior: 'auto' });
+        });
+    </script>
+</body>
+</html>

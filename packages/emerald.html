@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIGS | EMERALD SUITE</title>
+    <link rel="icon" href="../resource/favicon.ico" type="image/x-icon">
+    <link href="../output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@300;400;600&family=Space+Mono&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+    <style>
+        .font-archivo {
+            font-family: 'Archivo Black', sans-serif;
+        }
+
+        .font-garamond {
+            font-family: 'Cormorant Garamond', serif;
+        }
+
+        .font-mono {
+            font-family: 'Space Mono', monospace;
+        }
+
+        .blueprint-bg {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Standardized Section Background for Emerald */
+        /* Update this class in your <style> tag */
+        .spec-section {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-bottom: 1px solid #eee;
+            scroll-margin-top: 120px; /* <--- ADDS THE OFFSET AUTOMATICALLY */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f0e47',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="blueprint-bg font-['Poppins'] text-primary overflow-x-hidden bg-white/10">
+
+    <nav class="fixed top-0 left-0 w-full z-[100] flex justify-between items-start p-6 md:p-12 pointer-events-none">
+        <a href="../index.html" class="pointer-events-auto">
+            <img src="../resource/migslogo.png" alt="Logo" class="h-20 w-auto object-contain">
+        </a>
+        <div class="flex gap-6 text-[10px] uppercase tracking-[0.4em] font-bold text-black/60 pointer-events-auto mt-4 bg-white/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/20">
+            <a href="../index.html" class="hover:text-black">Home</a>
+            <a href="../projects.html" class="hover:text-black">Work</a>
+            <a href="../team.html" class="hover:text-black">The Team</a>
+            <a href="../services.html" class="hover:text-black">Services</a>
+            <a href="../contact.html" class="hover:text-black">Contact</a>
+        </div>
+    </nav>
+
+    <div class="flex flex-col md:flex-row min-h-screen">
+
+        <aside class="hidden md:flex w-[450px] max-w-[40vw] h-screen sticky top-0 bg-white/30 backdrop-blur-lg z-50 border-r border-gray-100 p-16 flex-col justify-center">
+            <span class="text-[10px] text-black/40 tracking-[0.5em] font-bold uppercase mb-4 block">PACKAGE 01</span>
+            <h1 class="font-black text-4xl md:text-[3.5vw] uppercase leading-[0.85] mb-6">Emerald<br>Suite</h1>
+
+            <p class="text-[12px] uppercase tracking-widest leading-loose text-black/50 mb-8">
+                Full Production Architecture. <br>From concept to execution.
+            </p>
+
+            <nav class="flex flex-col gap-3 text-[10px] uppercase  font-mono text-black/40 h-64 overflow-y-auto pr-4 scrollbar-hide">
+                <a href="#overview" class="hover:text-black hover:translate-x-2 transition-all">• 00. Overview</a>
+                <a href="#specifications" class="hover:text-black hover:translate-x-2 transition-all">• 01. Inclusions</a>
+                <a href="#ceiling-treatment" class="hover:text-black hover:translate-x-2 transition-all">• 02. Ceiling</a>
+                <a href="#trusses" class="hover:text-black hover:translate-x-2 transition-all">• 03. Truss & Tech</a>
+                <a href="#tunnel-design" class="hover:text-black hover:translate-x-2 transition-all">• 04. Tunnel</a>
+                <a href="#aisle-design" class="hover:text-black hover:translate-x-2 transition-all">• 05. Aisle</a>
+                <a href="#table-styling" class="hover:text-black hover:translate-x-2 transition-all">• 06. Tables</a>
+                <a href="#vip-experience" class="hover:text-black hover:translate-x-2 transition-all">• 07. VIP Dining</a>
+                <a href="#stage-design" class="hover:text-black hover:translate-x-2 transition-all">• 08. Stage Design</a>
+                <a href="#logistics" class="hover:text-black hover:translate-x-2 transition-all">• 09. Investment</a>
+            </nav>
+
+            <div class="mt-8">
+                <a href="../contact.html" class="inline-block border border-black/20 px-6 py-3 text-[9px] tracking-[0.3em] uppercase hover:bg-black hover:text-white transition-all">
+                    Book This Tier
+                </a>
+            </div>
+        </aside>
+
+        <main class="flex-1">
+            <section id="overview" class="spec-section pt-50 pb-20 px-12 md:px-20 relative z-20">
+                <div class="max-w-3xl">
+                    <span class="font-mono text-[12px] text-black/60 mb-2 block tracking-widest uppercase underline underline-offset-8">
+                        The Complete Manifest
+                    </span>
+
+                    <h2 class="font-garamond font-black text-5xl md:text-7xl uppercase tracking-tighter mb-8 leading-none">
+                        The Emerald<br>Standard
+                    </h2>
+
+                    <p class="text-[13px] leading-loose text-black/70 max-w-2xl">
+                        The definitive Migs production experience. This package encompasses the entire production lifecycle—from initial architectural drafting to the final lighting cue. We don't just coordinate; we engineer the atmosphere.
+                    </p>
+                </div>
+            </section>
+            <section id="specifications" class="spec-section py-20 px-12 md:px-20 bg-white/40">
+                <div class="flex items-start gap-4 mb-12">
+                    <span class=" text-[10px] bg-black text-white px-2 py-1">01</span>
+                    <h3 class="font-garamond font-black text-3xl uppercase tracking-tighter">Inclusions & Specifications</h3>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12 text-[12px]  text-black/60 uppercase leading-relaxed tracking-widest">
+
+                    <div class="space-y-10">
+                        <div>
+                            <h4 class="text-black font-bold mb-3 tracking-[0.2em] border-b border-black/10 pb-2">TRUSSES & CEILING STYLING</h4>
+                            <ul class="space-y-2">
+                                <li>• HEAVY-DUTY ALUMINUM TRUSS STRUCTURE COVERING UP TO 30 FT × 50 FT</li>
+                                <li>• CUSTOMIZED CEILING TREATMENT ALIGNED WITH THE CHOSEN WEDDING THEME</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-black font-bold mb-3 tracking-[0.2em] border-b border-black/10 pb-2">AISLE & WALKWAY DESIGN</h4>
+                            <ul class="space-y-2">
+                                <li>• THEMATIC AISLE OR PATHWAY STYLING</li>
+                                <li>• FABRIC DRAPING, LANTERNS, FLORALS, CANDLES, OR CUSTOMIZED DESIGN ELEMENTS</li>
+                                <li>• DESIGNED TO CREATE A DRAMATIC AND ELEGANT ENTRANCE</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-black font-bold mb-3 tracking-[0.2em] border-b border-black/10 pb-2">CARPET INSTALLATION</h4>
+                            <ul class="space-y-2">
+                                <li>• SINGLE CARPET INSTALLATION UP TO 6 FT × 80 FT</li>
+                                <li>• AVAILABLE IN WHITE, GREEN, OR BLUE</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="space-y-10">
+                        <div>
+                            <h4 class="text-black font-bold mb-3 tracking-[0.2em] border-b border-black/10 pb-2">TUNNEL STYLING</h4>
+                            <ul class="space-y-2">
+                                <li>• STANDARD 10 FT × 15 FT TUNNEL OR VENUE-ADAPTED DESIGN</li>
+                                <li>• TAILORED TO COMPLEMENT THE OVERALL WEDDING CONCEPT</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-black font-bold mb-3 tracking-[0.2em] border-b border-black/10 pb-2">TABLE STYLING SETUPS</h4>
+                            <ul class="space-y-2">
+                                <li>• COUPLE’S TABLE SETUP / DEBUTANT'S TABLE IF DEBUT</li>
+                                <li>• VIP TABLE SETUP</li>
+                                <li>• CAKE TABLE SETUP</li>
+                                <li>• GUEST TABLE STYLING (UP TO 100 GUESTS)</li>
+                                <li>• REGISTRATION TABLE STYLING</li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <h4 class="text-black font-bold mb-3 tracking-[0.2em] border-b border-black/10 pb-2">VIP EXPERIENCE & FLORALS</h4>
+                            <ul class="space-y-2">
+                                <li>• 30 CANDICE CHAIRS (WHITE AND GOLD)</li>
+                                <li>• WAVE OR RECTANGULAR GLASS TABLE ARRANGEMENT</li>
+                                <li>• **IMPORTANT:** ALL FLORAL ARRANGEMENTS ARE PREMIUM SYNTHETIC FLOWERS ONLY (NO FRESH FLOWERS INCLUDED)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="ceiling-treatment" class="spec-section py-20 px-12 md:px-20 bg-white/60">
+                <div class="flex flex-col lg:flex-row gap-16">
+
+                    <div class="flex-1">
+                        <div class="flex items-start gap-4 mb-8">
+                            <span class=" text-[10px] bg-black text-white px-2 py-1">02</span>
+                            <h3 class="font-garamond font-black text-3xl uppercase tracking-tighter">Ceiling Treatment</h3>
+                        </div>
+
+                        <div class="mb-12">
+                            <h4 class="font-garamond text-2xl uppercase leading-tight mb-6">
+                                "The moment guests look up,<br>the magic unfolds."
+                            </h4>
+                            <p class="text-[12px]  text-black/60 uppercase leading-relaxed tracking-widest mb-6">
+                                Our ceiling treatment is carefully crafted to add depth, elegance, and visual impact to your venue. Designed to create a refined, immersive, and unforgettable ceiling experience.
+                            </p>
+                        </div>
+
+                        <div class="p-8 border border-black/5 bg-white/80 relative overflow-hidden group">
+                            <div class="absolute top-0 left-0 w-1 h-full bg-black transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></div>
+
+                            <h4 class="font-bold text-[12px] tracking-[0.4em] mb-6 border-b border-black/10 pb-2">KEY ELEMENTS</h4>
+                            <ul class="space-y-3 text-[10px] text-black/50 tracking-widest uppercase ">
+                                <li>• PREMIUM FLOWING FABRIC DRAPING</li>
+                                <li>• CURATED HANGING GREENERY OR FLORALS</li>
+                                <li>• 20+ STATEMENT CHANDELIERS</li>
+                                <li>• DESIGNER PENDANT LIGHTINGS</li>
+                                <li>• WARM AMBIENT & PRECISION ACCENT LIGHTING</li>
+                                <li>• LAYERED CEILING COMPOSITION</li>
+                                <li>• THEME-BASED CUSTOM DESIGN</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 grid grid-cols-2 gap-4 h-full min-h-[500px]">
+                        <!-- four images 2x2 -->
+                        <div class="relative overflow-hidden group border border-black/5">
+                            <img src="../resource/ceiling_main.jpg" alt="Main Ceiling Setup" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-white/90 to-transparent translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <span class=" text-[9px] tracking-widest uppercase text-black font-bold">Immersive Depth</span>
+                            </div>
+                        </div>
+                        <div class="relative overflow-hidden group border border-black/5">
+                            <img src="../resource/ceiling_detail1.jpg" alt="Chandelier Detail" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-white/80 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class=" text-[9px] tracking-widest uppercase text-black">Statement Lighting</span>
+                            </div>
+                        </div>
+                        <div class="relative overflow-hidden group border border-black/5">
+                            <img src="../resource/ceiling_detail2.jpg" alt="Fabric Detail" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-white/80 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class=" text-[9px] tracking-widest uppercase text-black">Floral Rigging</span>
+                            </div>
+                        </div>
+                        <div class="relative overflow-hidden group border border-black/5">
+                            <img src="../resource/ceiling_detail3.jpg" alt="Additional Detail" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-white/80 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class=" text-[9px] tracking-widest uppercase text-black">Layered Textures</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+            <section id="trusses" class="spec-section py-20 px-12 md:px-20 bg-white/40">
+                <div class="flex flex-col lg:flex-row gap-16">
+
+                    <div class="flex-1">
+                        <div class="flex items-start gap-4 mb-8">
+                            <span class="text-[10px] bg-black text-white px-2 py-1 font-bold">03</span>
+                            <h3 class="font-garamond font-black text-3xl uppercase tracking-tighter">Truss & Structure</h3>
+                        </div>
+
+                        <div class="mb-12">
+                            <h4 class="font-poppins text-2xl uppercase leading-none mb-6">
+                                30' x 50'<br>Coverage Area
+                            </h4>
+
+                            <p class="text-[12px] leading-loose text-black/70 mb-8 font-semibold">
+                                A premium-scale truss structure—among the largest inclusions in the industry—built to deliver dramatic ceiling depth, visual impact, and a truly grand wedding atmosphere.
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-4 h-48">
+                                <!-- plan image -->
+                                <div class="w-full h-full bg-gray-100 border border-black/10 flex items-center justify-center overflow-hidden relative group">
+                                    <img src="../resource/truss_plan.jpg" alt="Truss Plan View" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                                    <div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                        <span class="text-[9px] tracking-[0.2em] uppercase font-bold bg-white/90 px-3 py-1">Plan View</span>
+                                    </div>
+                                </div>
+                                <!-- portrait video -->
+                                <div class="w-full h-full bg-gray-100 border border-black/10 flex items-center justify-center overflow-hidden relative group">
+                                    <video src="../resource/trussvid.mp4" class="absolute inset-0 w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110" autoplay muted loop playsinline></video>
+                                    <div class="absolute bottom-0 left-0 w-full p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                        <span class="text-[9px] tracking-[0.2em] uppercase font-bold bg-white/90 px-3 py-1">Portrait View</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 space-y-8">
+
+                        <div class="border-b border-black/10 pb-8">
+                            <h4 class="font-bold text-[12px] tracking-[0.2em] uppercase mb-3 text-black">What if the venue requires coverage larger than 1,500 sq. ft.?</h4>
+                            <p class="text-[12px] leading-relaxed text-black/60 uppercase tracking-wide">
+                                The Emerald Package includes 30 ft x 50 ft (1,500 sq. ft.) of truss coverage. Should the venue require additional coverage, extension is available at ₱50 per sq. ft., subject to venue layout and structural assessment.
+                            </p>
+                        </div>
+
+                        <div class="border-b border-black/10 pb-8">
+                            <h4 class="font-bold text-[12px] tracking-[0.2em] uppercase mb-3 text-black">What if the required truss area is less than 1,500 sq. ft.?</h4>
+                            <p class="text-[12px] leading-relaxed text-black/60 uppercase tracking-wide">
+                                The full truss allocation remains reserved for your event to ensure structural balance, design flexibility, and consistency of the ceiling treatment. Package value remains unchanged.
+                            </p>
+                        </div>
+
+                        <div class="border-b border-black/10 pb-8">
+                            <h4 class="font-bold text-[12px] tracking-[0.2em] uppercase mb-3 text-black">What if the truss will be provided by another supplier?</h4>
+                            <p class="text-[12px] leading-relaxed text-black/60 uppercase tracking-wide">
+                                If truss will be supplied by a third party, our team will coordinate accordingly. Please note that ceiling styling designs under the Emerald Package are optimized for Migs Styling Production's truss system, and design adjustments may apply depending on compatibility and load capacity.
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="tunnel-design" class="spec-section py-20 px-12 md:px-20 bg-white/60">
+                <div class="flex flex-col lg:flex-row gap-16">
+
+                    <div class="flex-1">
+                        <div class="flex items-start gap-4 mb-8">
+                            <span class="text-[10px] bg-black text-white px-2 py-1 font-bold">04</span>
+                            <h3 class="font-garamond font-black text-3xl uppercase tracking-tighter">Tunnel Design</h3>
+                        </div>
+
+                        <div class="mb-10">
+                            <p class="text-[12px] leading-loose text-black/70 mb-8 font-semibold">
+                                The tunnel design creates a dramatic entrance experience — setting the mood even before guests step into the main venue. It serves as a visual transition that builds excitement, elegance, and anticipation.
+                            </p>
+                            <h4 class="font-garamond text-xl uppercase leading-tight text-black/80 mb-8">
+                                "A striking entrance that welcomes guests into a world of elegance and celebration."
+                            </h4>
+                        </div>
+
+                        <div class="p-8 border border-black/5 bg-white/80 relative overflow-hidden group">
+                            <div class="absolute top-0 left-0 w-1 h-full bg-black transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></div>
+
+                            <h4 class="font-bold text-[12px] tracking-[0.4em] mb-6 border-b border-black/10 pb-2">KEY ELEMENTS</h4>
+                            <ul class="space-y-3 text-[10px] text-black/60 tracking-widest uppercase font-semibold">
+                                <li>• 10 ft x 10 ft structured tunnel framework</li>
+                                <li>• Thematic floral and styling treatment</li>
+                                <li>• Integrated lighting accents for depth and glow</li>
+                                <li>• Coordinated design aligned with aisle & ceiling</li>
+                                <li>• Customized styling based on your chosen theme</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 grid grid-cols-2 gap-4 h-full min-h-[500px]">
+
+                        <div class="col-span-1 row-span-2 relative overflow-hidden group border border-black/5">
+                            <img src="../resource/tunnel_main.jpg" alt="Floral Tunnel Entrance" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-white/90 to-transparent translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-[9px] tracking-widest uppercase text-black font-bold">Floral Framework</span>
+                            </div>
+                        </div>
+
+                        <div class="relative overflow-hidden group border border-black/5 h-full">
+                            <img src="../resource/tunnel_detail1.jpg" alt="Tunnel Lighting" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-white/80 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-[9px] tracking-widest uppercase text-black font-bold">Integrated Glow</span>
+                            </div>
+                        </div>
+
+                        <div class="relative overflow-hidden group border border-black/5 h-full">
+                            <img src="../resource/tunnel_detail2.jpg" alt="Tunnel Perspective" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-white/80 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-[9px] tracking-widest uppercase text-black font-bold">Visual Transition</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <section id="aisle-design" class="spec-section py-20 px-12 md:px-20 bg-white/60">
+                <div class="flex flex-col lg:flex-row gap-16">
+
+                    <div class="flex-1">
+                        <div class="flex items-start gap-4 mb-8">
+                            <span class="text-[10px] bg-black text-white px-2 py-1 font-bold">05</span>
+                            <h3 class="font-garamond font-black text-3xl uppercase tracking-tighter">Thematic Aisle Design</h3>
+                        </div>
+
+                        <div class="mb-10">
+                            <p class="text-[12px] leading-loose text-black/70 mb-8 font-semibold">
+                                The aisle is more than a walkway — it is the moment where emotions begin and memories are created. It is the path that leads to one of the most meaningful moments of your life.
+                            </p>
+                            <h4 class="font-garamond text-xl uppercase leading-tight text-black/80 mb-8">
+                                "Every step designed to lead you to your once-in-a-lifetime moment."
+                            </h4>
+                        </div>
+
+                        <div class="p-8 border border-black/5 bg-white/80 relative overflow-hidden group">
+                            <div class="absolute top-0 left-0 w-1 h-full bg-black transform scale-y-0 group-hover:scale-y-100 transition-transform duration-500 origin-top"></div>
+
+                            <h4 class="font-bold text-[12px] tracking-[0.4em] mb-6 border-b border-black/10 pb-2">KEY ELEMENTS</h4>
+                            <ul class="space-y-3 text-[10px] text-black/60 tracking-widest uppercase font-semibold">
+                                <li>• Thematic floral aisle arrangements (full or layered design)</li>
+                                <li>• Customized aisle layout based on venue space</li>
+                                <li>• Soft carpet or runway treatment</li>
+                                <li>• Candles, lanterns, or decorative accents</li>
+                                <li>• Harmonized styling with ceiling and stage design</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 grid grid-cols-2 gap-4 h-full min-h-[500px]">
+
+                        <div class="col-span-1 row-span-2 relative overflow-hidden group border border-black/5">
+                            <img src="../resource/aisle_main.jpg" alt="Thematic Aisle Main" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-white/90 to-transparent translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-[9px] tracking-widest uppercase text-black font-bold">Breathtaking Entrance</span>
+                            </div>
+                        </div>
+
+                        <div class="relative overflow-hidden group border border-black/5 h-full">
+                            <img src="../resource/aisle_detail1.jpg" alt="Aisle Detail 1" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-white/80 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-[9px] tracking-widest uppercase text-black font-bold">Layered Florals</span>
+                            </div>
+                        </div>
+
+                        <div class="relative overflow-hidden group border border-black/5 h-full">
+                            <img src="../resource/aisle_detail2.jpg" alt="Aisle Detail 2" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-white/80 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-[9px] tracking-widest uppercase text-black font-bold">Soft Lighting</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+            <section id="table-styling" class="spec-section py-20 px-12 md:px-20 bg-white/60">
+                <div class="flex items-start gap-4 mb-12">
+                    <span class="text-[10px] bg-black text-white px-2 py-1 font-bold">06</span>
+                    <h3 class="font-garamond font-black text-3xl uppercase tracking-tighter">Table Arrangements</h3>
+                </div>
+
+                <div class="mb-20">
+                    <h4 class="font-garamond text-2xl uppercase leading-tight mb-4">Guests' Table Arrangement</h4>
+                    <p class="text-[12px] leading-loose text-black/70 mb-8 font-semibold max-w-3xl">
+                        Signature guest table styling customized to the couple's chosen theme, featuring coordinated floral arrangements and refined decorative accents.
+                    </p>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 h-64">
+                        <div class="relative overflow-hidden group border border-black/5 h-full">
+                            <img src="../resource/guest_table1_placeholder.jpg" alt="Guest Table Setup 1" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-white/90 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-[9px] tracking-widest uppercase text-black font-bold">Coordinated Themes</span>
+                            </div>
+                        </div>
+                        <div class="relative overflow-hidden group border border-black/5 h-full">
+                            <img src="../resource/guest_table2_placeholder.jpg" alt="Guest Table Setup 2" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-white/90 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-[9px] tracking-widest uppercase text-black font-bold">Refined Accents</span>
+                            </div>
+                        </div>
+                        <div class="relative overflow-hidden group border border-black/5 h-full">
+                            <img src="../resource/guest_table3_placeholder.jpg" alt="Guest Table Setup 3" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-white/90 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-[9px] tracking-widest uppercase text-black font-bold">Versatile Palettes</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-20">
+                    <div>
+                        <h4 class="font-garamond text-xl uppercase leading-tight mb-4">Cake Table Set Up</h4>
+                        <p class="text-[10px] uppercase tracking-widest leading-relaxed text-black/60 mb-6">
+                            Styled cake table arrangement designed to complement the overall wedding motif, enhanced with floral details and elegant finishing touches.
+                        </p>
+                        <div class="relative overflow-hidden group border border-black/5 h-80">
+                            <img src="../resource/cake_table_placeholder.jpg" alt="Cake Table Setup" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-white/90 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-[9px] tracking-widest uppercase text-black font-bold">Elegant Finishing Touches</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-garamond text-xl uppercase leading-tight mb-4">Couple's Table Set Up</h4>
+                        <p class="text-[10px] uppercase tracking-widest leading-relaxed text-black/60 mb-6">
+                            Signature sweetheart table styling highlighting the couple as the main focal point, adorned with coordinated florals, backdrop draping, and decorative accents.
+                        </p>
+                        <div class="relative overflow-hidden group border border-black/5 h-80">
+                            <img src="../resource/couple_table_placeholder.jpg" alt="Couple's Table Setup" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-white/90 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-[9px] tracking-widest uppercase text-black font-bold">Main Focal Point</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-16 border-t border-black/5 pt-16">
+                    <div class="flex flex-col lg:flex-row gap-16">
+
+                        <div class="flex-1">
+                            <h4 class="font-garamond text-2xl uppercase leading-tight mb-6">VIP Table Arrangement</h4>
+                            <p class="text-[12px] leading-loose text-black/70 mb-8 font-semibold">
+                                The VIP table is where your most honored guests are seated — its design sets the tone of elegance and refinement for the entire celebration.
+                            </p>
+
+                            <div class="space-y-8">
+                                <div>
+                                    <h5 class="font-bold text-[10px] tracking-[0.2em] uppercase mb-4 text-black border-b border-black/10 pb-2 inline-block">Key Elements</h5>
+                                    <ul class="space-y-3 text-[10px] text-black/60 uppercase tracking-widest font-semibold">
+                                        <li>• Elegant table styling with refined layering</li>
+                                        <li>• Premium floral centerpieces (synthetic flowers only)</li>
+                                        <li>• Statement candelabras or designer lamps</li>
+                                        <li>• Theme-based custom styling</li>
+                                    </ul>
+                                </div>
+
+                                <div class="p-6 bg-black/5 border-l-2 border-black">
+                                    <p class="text-[10px] uppercase tracking-wide leading-relaxed text-black/70 font-bold">
+                                        Customization Option: Clients may freely choose their preferred centerpiece size (Small, Medium, or Large) and floral density based on their desired overall styling.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="flex-1 grid grid-cols-2 gap-4 h-full min-h-[500px]">
+                            <div class="col-span-1 row-span-2 relative overflow-hidden group border border-black/5">
+                                <img src="../resource/vip_table_main.jpg" alt="VIP Table Main" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                                <div class="absolute bottom-0 left-0 w-full p-4 bg-white/90 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                    <span class="text-[9px] tracking-widest uppercase text-black font-bold">Honored Seating</span>
+                                </div>
+                            </div>
+                            <div class="relative overflow-hidden group border border-black/5 h-full">
+                                <img src="../resource/vip_table_detail1.jpg" alt="VIP Detail 1" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                                <div class="absolute bottom-0 left-0 w-full p-4 bg-white/90 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                    <span class="text-[9px] tracking-widest uppercase text-black font-bold">Refined Layering</span>
+                                </div>
+                            </div>
+                            <div class="relative overflow-hidden group border border-black/5 h-full">
+                                <img src="../resource/vip_table_detail2.jpg" alt="VIP Detail 2" class="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                                <div class="absolute bottom-0 left-0 w-full p-4 bg-white/90 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                    <span class="text-[9px] tracking-widest uppercase text-black font-bold">Custom Sizing</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="border-t border-black/10 pt-8">
+                    <p class="text-[10px] uppercase tracking-widest leading-loose text-black/50 font-bold">
+                        <span class="text-black">Important Note:</span> Styling services include decorative setup only. All floral arrangements are synthetic. Tables, chairs, table linens, and table numbers are not included and must be provided by the venue or Caterer.
+                    </p>
+                </div>
+            </section>
+
+            <section id="vip-experience" class="spec-section py-20 px-12 md:px-20 bg-white/60">
+                
+                
+                
+                
+                
+                  <div class="flex items-start gap-4 mb-8">
+                            <span class="text-[10px] bg-black text-white px-2 py-1 font-bold">07</span>
+                            <h3 class="font-garamond font-black text-3xl uppercase tracking-tighter">VIP Experience</h3>
+                        </div>
+                <div class="flex flex-col lg:flex-row gap-16">
+
+
+                    <div class="flex-1 flex flex-col justify-center">
+                      
+
+                        <div class="mb-10">
+                            <span class="inline-block py-1 px-3 border border-black/10 text-[9px] font-bold tracking-[0.2em] uppercase mb-6 text-black/60">
+                                Value-Added Feature
+                            </span>
+                            <h4 class="font-garamond text-4xl uppercase leading-none mb-6">
+                                Elevated<br>Reception Seating
+                            </h4>
+                            <p class="text-[12px] leading-loose text-black/70 mb-8 font-semibold">
+                                This VIP Sitting Experience is offered as a value-added feature for clients who book Migs Styling Production. Thoughtfully arranged to elevate the reception atmosphere, it enhances the overall guest experience while maintaining a cohesive and elegant setup.
+                            </p>
+                        </div>
+
+                       
+                    </div>
+                    <div class="lg:col-span-1 gap-4">
+
+                        <div class="p-8 border-l-4 border-black bg-white/40">
+                            <h4 class="font-bold text-[12px] tracking-[0.4em] mb-6 uppercase text-black">Inclusions</h4>
+                            <ul class="space-y-4 text-[10px] text-black/70 tracking-widest uppercase font-bold">
+                                <li class="flex items-center gap-3">
+                                    <span class="w-1.5 h-1.5 bg-black rounded-full"></span>
+                                    30 Candice Chairs (White and Gold)
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="w-1.5 h-1.5 bg-black rounded-full"></span>
+                                    2 Serpentine Tables (Curated Layout)
+                                </li>
+                                <li class="flex items-center gap-3">
+                                    <span class="w-1.5 h-1.5 bg-black rounded-full"></span>
+                                    Premium Oblong Tables (Configuration varies by venue)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+                <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4">
+
+
+                    <div class="space-y-4">
+                    
+                        <div class="relative overflow-hidden group border border-black/5">
+                            <img src="../resource/vip_table_setting.jpg" alt="VIP Table Setting" class="w-full h-auto object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-white/80 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-[9px] tracking-widest uppercase text-black font-bold">Value-Added Feature</span>
+                            </div>
+                        </div>
+
+                        <div class="relative overflow-hidden group border border-black/5">
+                            <img src="../resource/vip_extra.jpg" alt="Additional VIP Detail" class="w-full h-auto object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-white/80 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-[9px] tracking-widest uppercase text-black font-bold">Extra Detail</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+
+                        <div class="relative overflow-hidden group border border-black/5">
+                            <img src="../resource/vip_setup_main.jpg" alt="VIP Serpentine Setup" class="w-full h-auto object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-white/90 to-transparent translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-[9px] tracking-widest uppercase text-black font-bold">Curated Layouts</span>
+                            </div>
+                        </div>
+
+                        <div class="relative overflow-hidden group border border-black/5">
+                            <img src="../resource/candice_chair_detail.jpg" alt="Candice Chair White and Gold" class="w-full h-auto object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                            <div class="absolute bottom-0 left-0 w-full p-4 bg-white/80 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+                                <span class="text-[9px] tracking-widest uppercase text-black font-bold">Signature Seating</span>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+            </section>
+
+
+            <section id="stage-design" class="spec-section py-20 px-12 md:px-20 bg-white/60">
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+                    <div class="lg:col-span-2">
+                        <div class="grid grid-cols-1 gap-4">
+                            <div class="relative overflow-hidden group border border-black/5">
+                                <img src="../resource/stage_main.jpg" alt="Stage Main" class="w-full h-auto object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                                <div class="absolute bottom-0 left-0 w-full p-6 bg-gradient-to-t from-white/90 to-transparent translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+                                    <span class="text-[9px] tracking-widest uppercase text-black font-bold">Stage Focal</span>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="relative overflow-hidden group border border-black/5">
+                                    <img src="../resource/stage_detail1.jpg" alt="Stage Detail 1" class="w-full h-auto object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                                </div>
+                                <div class="relative overflow-hidden group border border-black/5">
+                                    <img src="../resource/stage_detail2.jpg" alt="Stage Detail 2" class="w-full h-auto object-cover transition-transform duration-1000 ease-out group-hover:scale-110">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-1">
+                        <div class="flex items-start gap-4 mb-6">
+                            <span class="text-[10px] bg-black text-white px-2 py-1 font-bold">08</span>
+                            <h3 class="font-garamond font-black text-3xl uppercase tracking-tighter">Stage Design</h3>
+                        </div>
+
+                        <h4 class="font-bold text-[12px] tracking-[0.2em] uppercase mb-4 text-black">Some Key Elements</h4>
+                        <ul class="space-y-3 text-[12px] text-black/70 mb-6">
+                            <li>• Customized stage backdrop design</li>
+                            <li>• Layered panels, textures, and architectural elements</li>
+                            <li>• Premium floral styling (synthetic flowers)</li>
+                            <li>• Harmonized with ceiling treatment and aisle design</li>
+                        </ul>
+
+                        <div class="mb-6">
+                            <h5 class="font-bold text-[12px] uppercase mb-2">Stage Size Provision</h5>
+                            <div class="w-full h-20 bg-gradient-to-b from-gray-200 to-gray-300 rounded-lg flex items-center justify-center border border-black/10">
+                                <span class="text-[12px] font-bold">12 ft diameter stage</span>
+                            </div>
+                            <p class="text-[10px] text-black/60 mt-2">(Customizable based on venue layout and overall styling concept)</p>
+                        </div>
+
+                        <p class="text-[12px] italic text-black/60 mt-8">“Every detail is intentionally designed to create a stage worthy of your love story.”</p>
+                    </div>
+
+                </div>
+
+
+            <section id="logistics" class="spec-section py-20 px-12 md:px-20 bg-white/60">
+
+                <div class="mb-20 border-b border-black/10 pb-12">
+                    <div class="flex flex-col md:flex-row justify-between items-end gap-8">
+                        <div>
+                            <span class="text-[10px] bg-black text-white px-2 py-1 font-bold mb-4 inline-block">09</span>
+                            <h3 class="font-black text-3xl uppercase tracking-tighter mb-2">Logistics & Investment</h3>
+                            <p class="text-[12px] uppercase tracking-[0.2em] text-black/60">Operational Requirements & Terms</p>
+                        </div>
+                        <div class="text-right">
+                            <span class="block text-[10px] font-bold tracking-[0.2em] uppercase text-black/40 mb-1">Total Package Investment</span>
+                            <h2 class="font-garamond text-6xl md:text-7xl uppercase leading-none text-black">
+                                ₱220,000
+                            </h2>
+                            <p class="text-[9px] uppercase tracking-widest text-black/50 mt-2">
+                                *Exclusive of Out-of-Town Fees
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-col lg:flex-row gap-16">
+
+                    <div class="flex-1">
+                        <h4 class="font-garamond text-2xl uppercase leading-tight mb-6">Out of Town Fees</h4>
+                        <p class="text-[12px] leading-loose text-black/70 mb-8 font-semibold">
+                            Events located outside Gerona, Tarlac are subject to an out-of-town fee to cover transportation, logistics, manpower, and operational requirements. Final cost determined upon venue confirmation.
+                        </p>
+
+                        <div class="space-y-6">
+                            <div class="p-6 border border-black/5 bg-white/40 group hover:border-black/20 transition-colors duration-500">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-bold text-[12px] tracking-[0.2em] uppercase">Zone 01</span>
+                                    <span class="font-archivo text-xl">₱25,000</span>
+                                </div>
+                                <p class="text-[10px] uppercase tracking-widest text-black/60">
+                                    Pangasinan • Pampanga • Nueva Ecija
+                                </p>
+                            </div>
+
+                            <div class="p-6 border border-black/5 bg-white/40 group hover:border-black/20 transition-colors duration-500">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-bold text-[12px] tracking-[0.2em] uppercase">Zone 02</span>
+                                    <span class="font-archivo text-xl">₱35,000</span>
+                                </div>
+                                <p class="text-[10px] uppercase tracking-widest text-black/60">
+                                    Manila • Antipolo • La Union • Bulacan
+                                </p>
+                            </div>
+
+                            <div class="p-6 border border-black/5 bg-white/40 group hover:border-black/20 transition-colors duration-500">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-bold text-[12px] tracking-[0.2em] uppercase">Zone 03</span>
+                                    <span class="font-archivo text-xl">₱45,000</span>
+                                </div>
+                                <p class="text-[10px] uppercase tracking-widest text-black/60">
+                                    Tagaytay • Laguna • Cavite • Batangas • Zambales • Baguio
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex-1 space-y-12">
+
+                        <div>
+                            <h4 class="font-garamond text-2xl uppercase leading-tight mb-6">Payment Terms</h4>
+                            <div class="relative pl-8 space-y-8 border-l border-black/10">
+                                <div class="relative">
+                                    <span class="absolute -left-[37px] top-1 w-4 h-4 bg-black rounded-full border-4 border-white"></span>
+                                    <h5 class="font-bold text-[12px] tracking-[0.2em] uppercase mb-1">Reservation Fee</h5>
+                                    <p class="text-[10px] uppercase tracking-widest text-black/60">
+                                        Required upon confirmation of booking to block the date.
+                                    </p>
+                                </div>
+                                <div class="relative">
+                                    <span class="absolute -left-[37px] top-1 w-4 h-4 bg-white border-2 border-black rounded-full"></span>
+                                    <h5 class="font-bold text-[12px] tracking-[0.2em] uppercase mb-1">50% Downpayment</h5>
+                                    <p class="text-[10px] uppercase tracking-widest text-black/60">
+                                        Due six (6) months before the event date.
+                                    </p>
+                                </div>
+                                <div class="relative">
+                                    <span class="absolute -left-[37px] top-1 w-4 h-4 bg-white border-2 border-black rounded-full"></span>
+                                    <h5 class="font-bold text-[12px] tracking-[0.2em] uppercase mb-1">Full Balance Settlement</h5>
+                                    <p class="text-[10px] uppercase tracking-widest text-black/60">
+                                        Remaining balance due one (1) month before the event date.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+                            <h4 class="font-garamond text-2xl uppercase leading-tight mb-6">Booking Policy</h4>
+                            <ul class="space-y-4 text-[10px] text-black/60 uppercase tracking-widest leading-relaxed">
+                                <li>• Event dates are secured on a first-come, first-served basis.</li>
+                                <li>• Booking is officially confirmed only upon receipt of the non-refundable reservation fee.</li>
+                                <li>• Verbal confirmations or temporary holds do not guarantee date availability.</li>
+                                <li>• Reservation fees are non-refundable and non-transferable under any circumstances.</li>
+                            </ul>
+                        </div>
+
+                        <div class="pt-8 border-t border-black/10 text-right">
+                            <span class="font-mono text-[10px] tracking-[0.4em] uppercase text-black/40">To God be the Glory</span>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+
+
+
+            <section class="bg-neutral-900 text-white p-12 md:p-24 relative z-20">
+                <div class="max-w-2xl">
+                    <span class="text-[10px] tracking-[0.8em] text-white/40 uppercase mb-8 block">Emerald Suite</span>
+                    <h2 class="font-black text-4xl md:text-6xl uppercase leading-[0.9] mb-12">Designed for Impact.<br>Engineered for You.</h2>
+                    <p class="text-[14px] leading-loose text-white/60 mb-12">
+                        The Emerald Suite is our most requested package for a reason. It balances technical precision with high-art aesthetics. Secure your date for the upcoming season.
+                    </p>
+                    <a href="../contact.html" class="inline-block border border-white/20 px-8 py-4 text-[10px] tracking-[0.5em] uppercase hover:bg-white hover:text-black transition-all">Request a Spec Sheet</a>
+                </div>
+            </section>
+
+            <footer class="bg-white p-12 md:p-24 border-t border-black/5 relative z-20">
+                <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                    <div class="max-w-xs">
+                        <img src="../resource/migslogo.png" alt="Logo" class="h-12 mb-6">
+                        <p class="text-[10px] uppercase tracking-widest text-black/40 leading-relaxed">
+                            Creating immersive environments for the modern metropolitan celebration.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-16">
+                        <div>
+                            <h5 class="text-[12px] font-bold tracking-widest mb-6 uppercase">CONNECT</h5>
+                            <ul class="text-[10px] space-y-4 text-black/50 uppercase tracking-widest font-mono">
+                                <li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fmigsstylingprod%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBEyRDJNSFpGazBQNXNxMUNoRnNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR7lH0Ag-Unb-6CJsbVTkCqqlP7FicvbWJEwOMwR0pOcxfyNJXtdsWY0_3BQmw_aem_j8aiS9Jj15FclW0dmjp78w&h=AT7JyvNkYEuI4J86WICiXe7CMDy872VYWx4S28fzypt262_jow8KnMTM787_Ame4mOV4twCaSWduEM5p5E3KlWk8vdukPh9zOWbM_pc_IYT4X79SUHBfT-SN1EohYZgET_qu" class="hover:text-black transition-colors">Instagram</a></li>
+                                <li><a href="https://www.facebook.com/migscatering/" class="hover:text-black transition-colors">Facebook</a></li>
+                                <li><a href="../contact.html" class="hover:text-black transition-colors">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="text-[12px] font-bold tracking-widest mb-6 uppercase">PAGES</h5>
+                            <ul class="text-[10px] space-y-4 text-black/50 uppercase tracking-widest font-mono">
+                                <li><a href="../terms.html" class="hover:text-black transition-colors">Terms</a></li>
+                                <li><a href="../privacy.html" class="hover:text-black transition-colors">Privacy</a></li>
+                                <li><a href="../cookies.html" class="hover:text-black transition-colors">Cookies</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-24 pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <span class="text-[9px] text-black/30 uppercase tracking-[0.4em]">© 2026 Migs Styling Production. All Rights Reserved.</span>
+                    <span class="text-[9px] text-black/30 uppercase tracking-[0.4em]">Built for the Extraordinary.</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+ 
+</body>
+</html>

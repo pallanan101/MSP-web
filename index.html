@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIGS | PRODUCTION</title>
+    <link rel="icon" href="resource/favicon.ico" type="image/x-icon">
+    <link href="output.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f0e47',
+                    },
+                    fontFamily: {
+                        archivo: ['Archivo Black', 'sans-serif'],
+                        poppins: ['Poppins', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .font-archivo {
+            font-family: 'Archivo Black', sans-serif;
+        }
+        .font-poppins {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .font-garamond {
+         font-family: "Cormorant Garamond", serif;
+         font-optical-sizing: auto;
+         font-style: normal;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            background-color: white;
+        }
+
+        .blur-bg {
+            filter: blur(10px) brightness(1) saturate(1);
+            transform: scale(1.5);
+            opacity: 0.7;
+        }
+
+        .reveal {
+            animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .soft-glow {
+            text-shadow: 0 1px 8px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body class="relative flex items-center text-primary font-poppins">
+
+    <div class="absolute inset-0 z-0 overflow-hidden">
+        <video autoplay muted loop playsinline class="w-full h-full object-cover blur-bg">
+            <source src="resource/videofont.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="relative z-10 flex w-full h-full">
+        <aside class="w-[25%] md:w-[20%] h-full overflow-hidden border-r border-black/5">
+            <video autoplay muted loop playsinline class="w-full h-full object-cover">
+                <source src="resource/videofont.mp4" type="video/mp4">
+            </video>
+        </aside>
+
+        <main class="flex-1 flex flex-col justify-center p-8 md:p-24">
+            <div class="flex flex-col leading-[0.8] tracking-tighter mb-8 reveal">
+                <h1 class="font-poppins font-bold text-[13vw] md:text-[10vw] uppercase">MIGS</h1>
+                <h1 class="font-poppins font-bold text-[13vw] md:text-[10vw] uppercase">STYLING</h1>
+                <h1 class="font-poppins font-bold text-[13vw] md:text-[10vw] uppercase opacity-40">PRODUCTION</h1>
+            </div>
+
+            <div class="flex flex-col gap-6 reveal" style="animation-delay: 0.1s;">
+                <p class="max-w-[320px] text-[12px] md:text-[14px] uppercase tracking-[0.1em] font-large opacity-90 leading-relaxed">
+                    We turn empty rooms into full experiences.
+                </p>
+
+                <div class="flex gap-4 text-[10px] uppercase tracking-[0.4em] text-black/40 font-semibold">
+                    <span>Venues</span>
+                    <span class="opacity-20">/</span>
+                    <span>Weddings</span>
+                    <span class="opacity-20">/</span>
+                    <span>Sets</span>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div class="absolute inset-0 z-20 pointer-events-none flex flex-col justify-between p-8 md:p-12">
+        <nav class="flex justify-between items-start pointer-events-auto">
+            <a href="index.html" class="block">
+                <img src="resource/migslogo.png" alt="MIGS Logo" style="height: 10rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));" class="w-auto object-contain">
+            </a>
+            <div class="flex gap-10 text-[10px] uppercase tracking-[0.4em] font-bold text-black/60">
+                <a href="projects.html" class="hover:text-black transition">Work</a>
+                <a href="team.html" class="hover:text-black transition">The Team</a>
+                <a href="services.html" class="hover:text-black transition">Services</a>
+                <a href="contact.html" class="hover:text-black transition">Contact</a>
+            </div>
+        </nav>
+
+        <footer class="flex justify-between items-end pointer-events-auto text-[10px] uppercase tracking-[0.4em] text-black/40 soft-glow">
+            <div class="flex flex-col gap-1">
+                <span class="text-black/80 font-bold">Studio Manila</span>
+                <span>Available Worldwide</span>
+            </div>
+            <div class="flex flex-wrap justify-end gap-x-8 gap-y-2 max-w-[60%]">
+                <div class="flex gap-6 text-[10px] tracking-[0.2em] opacity-50 lowercase">
+                    <a href="#" class="hover:text-black transition">Cookies</a>
+                    <a href="#" class="hover:text-black transition">Copyright</a>
+                    <a href="#" class="hover:text-black transition">Privacy Policy</a>
+                </div>
+                <div class="flex gap-8 font-bold text-black/80">
+                    <a href="https://www.facebook.com/migscatering/" class="hover:opacity-50 transition">Facebook</a>
+                    <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fmigsstylingprod%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBEyRDJNSFpGazBQNXNxMUNoRnNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR7lH0Ag-Unb-6CJsbVTkCqqlP7FicvbWJEwOMwR0pOcxfyNJXtdsWY0_3BQmw_aem_j8aiS9Jj15FclW0dmjp78w&h=AT7JyvNkYEuI4J86WICiXe7CMDy872VYWx4S28fzypt262_jow8KnMTM787_Ame4mOV4twCaSWduEM5p5E3KlWk8vdukPh9zOWbM_pc_IYT4X79SUHBfT-SN1EohYZgET_qu" class="hover:opacity-50 transition">Instagram</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

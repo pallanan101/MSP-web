@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIGS | PRODUCTION SPECS</title>
+    <link rel="icon" href="resource/favicon.ico" type="image/x-icon">
+    <link href="output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Poppins:wght@300;400;600&family=Space+Mono&display=swap" rel="stylesheet">
+
+    <style>
+        /* Custom Font Definitions */
+        .font-archivo {
+            font-family: 'Archivo Black', sans-serif;
+        }
+
+        .font-mono {
+            font-family: 'Space Mono', monospace;
+        }
+
+        /* Complex Animations & Blueprint Grid */
+        .blueprint-bg {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Logic for the Drawer Expansion */
+        .details-drawer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.8s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s ease;
+            opacity: 0;
+        }
+
+        .package-tier.active .details-drawer {
+            max-height: 1200px;
+            opacity: 1;
+        }
+        .spec-section {
+            background-color: rgba(255, 255, 255, 0.6);
+            border-bottom: 1px solid #eee;
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f0e47',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="blueprint-bg font-['Poppins'] text-primary overflow-x-hidden bg-white/10">
+
+    <nav class="fixed top-0 left-0 w-full z-[100] flex justify-between items-start p-6 md:p-12 pointer-events-none">
+        <a href="index.html" class="pointer-events-auto">
+            <img src="resource/migslogo.png" alt="Logo" class="h-20 w-auto object-contain">
+        </a>
+        <div class="flex gap-6 text-[10px] uppercase tracking-[0.4em] font-bold text-black/60 pointer-events-auto mt-4 bg-white/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/20">
+            <a href="index.html" class="hover:text-black">Home</a>
+            <a href="projects.html" class="hover:text-black">Work</a>
+            <a href="team.html" class="hover:text-black">The Team</a>
+            <a href="services.html" class="text-black border-b border-black">Services</a>
+            <a href="contact.html" class="hover:text-black">Contact</a>
+        </div>
+    </nav>
+
+    <div class="flex flex-col md:flex-row min-h-screen">
+
+        <aside class="hidden md:flex sidebar-container w-[450px] max-w-[40vw] h-screen sticky top-0 bg-white/30 backdrop-blur-lg z-50 border-r border-gray-100 p-16 flex-col justify-center">
+            <span class="text-[10px] text-black/40 tracking-[0.5em] font-bold uppercase mb-4 block">03</span>
+            <h1 class="font-archivo text-4xl md:text-[3.5vw] uppercase leading-[0.85] mb-6">Service<br>Specs</h1>
+            <p class="text-[11px] uppercase tracking-widest leading-loose text-black/50">
+                Hover to explore atmospheric layers. Click to expand production protocols.
+            </p>
+        </aside>
+
+        <main class="flex-1">
+            
+
+            <div class="bg-white px-8 md:px-16 pt-40 border-t border-black/5 relative z-20">
+                <h2 class="font-archivo text-4xl md:text-6xl uppercase tracking-tighter">Inventory Tiers</h2>
+                <div class="w-20 h-2 bg-black mt-4 mb-12"></div>
+            </div>
+
+            <div class="package-tier group relative p-12 md:p-20 border-b border-gray-100 z-10 transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] hover:pl-14 md:hover:pl-24 hover:bg-white/40">
+                <div class="absolute inset-0 bg-cover bg-center transition-all duration-700 opacity-30 group-hover:opacity-0 scale-105 pointer-events-none z-[-1]" style="background-image: url('resource/s1bg1.jpg');"></div>
+                <div class="absolute inset-0 bg-cover bg-center transition-all duration-700 opacity-0 group-hover:opacity-30 scale-105 pointer-events-none z-[-1]" style="background-image: url('resource/s1bg2.jpg');"></div>
+
+                <div class="relative z-10 pointer-events-none">
+                    <div class="flex justify-between items-start mb-6">
+                        <div>
+                            <span class="font-mono text-[12px] text-black/60 mb-2 block tracking-widest">TIER 01</span>
+                            <h2 class="font-archivo text-4xl md:text-5xl uppercase tracking-tighter">EMERALD SUITE</h2>
+                            <p class="text-[10px] font-mono mt-2 text-black/40 uppercase tracking-[0.2em]">Full Production Architecture</p>
+                        </div>
+                    </div>
+                    <p class="text-[11px] uppercase tracking-[0.2em] text-black/60 leading-relaxed max-w-md mb-8">
+                        The definitive Migs experience. Engineered with a massive 30'x50' truss system, immersive ceiling architecture, and complete VIP styling integration.
+                    </p>
+                </div>
+
+                <div class="details-drawer relative z-10 border-t border-black/10">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 pt-12">
+                        <div>
+                            <h4 class="font-bold text-[11px] tracking-[0.4em] mb-6">TECHNICAL INFRASTRUCTURE</h4>
+                            <ul class="space-y-4 text-[10px] text-black/50 tracking-widest leading-relaxed">
+                                <li>• HEAVY-DUTY ALUMINUM TRUSS (30' x 50')</li>
+                                <li>• IMMERSIVE CEILING TREATMENT</li>
+                                <li>• THEMATIC TUNNEL ENTRANCE</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-[11px] tracking-[0.4em] mb-6">STYLING & CURATION</h4>
+                            <ul class="space-y-4 text-[10px] text-black/50 tracking-widest leading-relaxed">
+                                <li>• 30 VIP CANDICE CHAIRS (WHITE/GOLD)</li>
+                                <li>• THEMATIC AISLE & RUNWAY</li>
+                                <li>• GUEST TABLE SCAPES (UP TO 100 PAX)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap gap-6 mt-10 relative z-20">
+                    <div class="buttonhover flex items-center gap-4 cursor-pointer transition-all duration-700 opacity-70 hover:opacity-100 hover:scale-110 hover:translate-x-5" onclick="toggleTier(this.closest('.package-tier'))">
+                        <div class="w-10 h-10 border border-black flex items-center justify-center bg-white">
+                            <span class="plus-icon text-xl transition-transform duration-700 group-[.active]:rotate-45">+</span>
+                        </div>
+                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] font-bold text-black btn-text bg-white/80 px-2 py-1">Quick Preview</span>
+                    </div>
+                    <a href="packages/emerald.html" class="buttonhover flex items-center gap-4 cursor-pointer transition-all duration-700 opacity-70 hover:opacity-100 hover:scale-110 hover:translate-x-5">
+                        <div class="w-10 h-10 border border-black flex items-center justify-center bg-white">
+                            <span class="text-xl">>></span>
+                        </div>
+                        <span class="font-mono text-[10px] uppercase tracking-[0.3em] font-bold text-black bg-white/80 px-2 py-1">View Full Package</span>
+                    </a>
+                </div>
+            </div>
+
+
+            <section class="spec-section pt-10 pb-20 px-12 md:px-20 relative z-20">
+                <div class="max-w-xl">
+                    <h2 class="font-archivo text-3xl uppercase mb-8">Architect Your Event</h2>
+                    <div class="space-y-12 text-[12px]    text-black/70">
+                        <p>
+                            Unsure which tier fits your vision? We offer a wide variety of modular products and production scales. Whether you are looking for a singular aesthetic glow or a full-scale structural transformation, we have the tools to engineer it.
+                        </p>
+                        <div class="grid grid-cols-1 gap-10">
+                            <div>
+                                <h4 class="font-bold text-black mb-2 text-[11px] ">CUSTOM SOLUTIONS</h4>
+                                <p class="text-black/50">If our standard tiers don't align with your requirements, we draft bespoke spec sheets tailored to your specific venue and guest count.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-black mb-2 text-[11px] ">PRODUCT DIVERSITY</h4>
+                                <p class="text-black/50">From signature chandelier rigs to architectural floral textures—explore our variety of elements designed for high-impact visual storytelling.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="bg-neutral-900 text-white p-12 md:p-24 relative z-20">
+                <div class="max-w-2xl">
+                    <span class="text-[10px] tracking-[0.8em] text-white/40 uppercase mb-8 block">Migs Styling Production</span>
+                    <h2 class="font-archivo text-4xl md:text-6xl uppercase leading-[0.9] mb-12">Designed for Impact.<br>Engineered for You.</h2>
+                    <p class="text-[14px] leading-loose text-white/60 mb-12">
+                        Our tiered service modules are designed to be as flexible as they are precise. Whether you require a specialized aesthetic overlay for an existing plan or a ground-up production build, we provide the technical rigging and editorial curation needed to elevate your event.
+                    </p>
+                    <a href="contact.html" class="inline-block border border-white/20 px-8 py-4 text-[10px] tracking-[0.5em] uppercase hover:bg-white hover:text-black transition-all">Request a Spec Sheet</a>
+                </div>
+            </section>
+
+            <footer class="bg-white p-12 md:p-24 border-t border-black/5 relative z-20">
+                <div class="flex flex-col md:flex-row justify-between items-start gap-12">
+                    <div class="max-w-xs">
+                        <img src="resource/migslogo.png" alt="Logo" class="h-12 mb-6">
+                        <p class="text-[10px] uppercase tracking-widest text-black/40 leading-relaxed">
+                            Creating immersive environments for the modern metropolitan celebration.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-16">
+                        <div>
+                            <h5 class="text-[11px] font-bold tracking-widest mb-6 uppercase">CONNECT</h5>
+                            <ul class="text-[10px] space-y-4 text-black/50 uppercase tracking-widest font-mono">
+                                <li><a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fmigsstylingprod%3Ffbclid%3DIwZXh0bgNhZW0CMTAAYnJpZBEyRDJNSFpGazBQNXNxMUNoRnNydGMGYXBwX2lkEDIyMjAzOTE3ODgyMDA4OTIAAR7lH0Ag-Unb-6CJsbVTkCqqlP7FicvbWJEwOMwR0pOcxfyNJXtdsWY0_3BQmw_aem_j8aiS9Jj15FclW0dmjp78w&h=AT7JyvNkYEuI4J86WICiXe7CMDy872VYWx4S28fzypt262_jow8KnMTM787_Ame4mOV4twCaSWduEM5p5E3KlWk8vdukPh9zOWbM_pc_IYT4X79SUHBfT-SN1EohYZgET_qu" class="hover:text-black transition-colors">Instagram</a></li>
+                                <li><a href="https://www.facebook.com/migscatering/" class="hover:text-black transition-colors">Facebook</a></li>
+                                <li><a href="contact.html" class="hover:text-black transition-colors">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 class="text-[11px] font-bold tracking-widest mb-6 uppercase">PAGES</h5>
+                            <ul class="text-[10px] space-y-4 text-black/50 uppercase tracking-widest font-mono">
+                                <li><a href="terms.html" class="hover:text-black transition-colors">Terms</a></li>
+                                <li><a href="privacy.html" class="hover:text-black transition-colors">Privacy</a></li>
+                                <li><a href="cookies.html" class="hover:text-black transition-colors">Cookies</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-24 pt-12 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                    <span class="text-[9px] text-black/30 uppercase tracking-[0.4em]">© 2026 Migs Styling Production. All Rights Reserved.</span>
+                    <span class="text-[9px] text-black/30 uppercase tracking-[0.4em]">Built for the Extraordinary.</span>
+                </div>
+            </footer>
+        </main>
+    </div>
+
+    <script>
+        function toggleTier(container) {
+            container.classList.toggle('active');
+            const textSpan = container.querySelector('.btn-text');
+            textSpan.innerText = container.classList.contains('active') ? 'Hide Specs' : 'Quick Preview';
+        }
+    </script>
+</body>
+</html>
