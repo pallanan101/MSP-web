@@ -55,12 +55,12 @@
             background-color: white;
         }
         
-        @media (min-width: 768px) {
+         
             body, html {
                 height: 100vh;
                 overflow: hidden;
             }
-        }
+        
 
         .blur-bg {
             filter: blur(10px) brightness(1) saturate(1);
@@ -86,6 +86,14 @@
 
         .soft-glow {
             text-shadow: 0 1px 8px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.5);
+        }
+
+        /* responsive navbar links */
+     
+        
+        @media (max-width:768px) {
+            nav .flex a { font-size: 1.8vw !important; }
+            
         }
     </style>
 </head>
@@ -132,7 +140,7 @@
             <a href="index.html" class="block">
                 <img src="resource/migslogo.png" alt="MIGS Logo" style="height: 10rem; filter: drop-shadow(0 4px 6px rgba(0,0,0,0.1));" class="w-auto object-contain">
             </a>
-            <div class="flex gap-10 text-[10px] uppercase tracking-[0.4em] font-bold text-black/60">
+            <div class="flex gap-6 text-[10px] uppercase tracking-[0.4em] font-bold text-black/60">
                 <a href="projects.html" class="hover:text-black transition">Work</a>
                 <a href="team.html" class="hover:text-black transition">The Team</a>
                 <a href="services.html" class="hover:text-black transition">Services</a>

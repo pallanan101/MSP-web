@@ -28,8 +28,6 @@
 
     <style>
 
-
-  @media (min-width: 768px) and (orientation: landscape) {
         body {
             color: #0f0e47;
             font-family: 'Poppins', sans-serif;
@@ -39,7 +37,7 @@
             background: white;
         }
 
-    }
+    
         .font-garamond {
          font-family: "Cormorant Garamond", serif;
          font-optical-sizing: auto;
@@ -153,6 +151,10 @@
             opacity: 1;
             transform: translateY(0);
         }
+        @media (max-width:768px) {
+            nav .flex a { font-size: 1.8vw !important; }
+            
+        }
     </style>
 </head>
 <body class="relative text-black">
@@ -161,7 +163,7 @@
         <a href="index.html" class="pointer-events-auto">
             <img src="resource/migslogo.png" alt="Logo" style="height: 5rem;" class="w-auto object-contain">
         </a>
-        <div class="flex gap-6 text-[9px] md:text-[10px] uppercase tracking-[0.4em] font-bold text-black/60 pointer-events-auto mt-4 bg-white/40 backdrop-blur-md px-5 py-3 rounded-full border border-white/20 shadow-sm">
+        <div class="flex gap-3 text-[9px] md:text-[10px] uppercase tracking-[0.4em] font-bold text-black/60 pointer-events-auto mt-4 bg-white/40 backdrop-blur-md px-5 py-3 rounded-full border border-white/20 shadow-sm">
             <a href="index.html" class="hover:text-black transition">Home</a>
             <a href="projects.html" class="text-black border-b border-black">Work</a>
 
@@ -274,7 +276,8 @@
 
         function moveProject(dir) {
             currentProject = Math.max(0, Math.min(totalProjects - 1, currentProject + dir));
-            parent.scrollTo({ left: currentProject * window.innerWidth, behavior: 'smooth' });
+            const slideWidth = parent.clientWidth;
+            parent.scrollTo({ left: currentProject * slideWidth, behavior: 'smooth' });
 
             const sections = document.querySelectorAll('.project-section');
             sections.forEach((sec, i) => {
@@ -299,7 +302,8 @@
         });
 
         window.addEventListener('resize', () => {
-            parent.scrollTo({ left: currentProject * window.innerWidth, behavior: 'auto' });
+            const slideWidth = parent.clientWidth;
+            parent.scrollTo({ left: currentProject * slideWidth, behavior: 'auto' });
         });
     </script>
 </body>

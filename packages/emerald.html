@@ -33,6 +33,10 @@
             border-bottom: 1px solid #eee;
             scroll-margin-top: 120px; /* <--- ADDS THE OFFSET AUTOMATICALLY */
         }
+       @media (max-width:768px) {
+            nav .flex a { font-size: 1.8vw !important; }
+            
+        }
     </style>
     <script>
         tailwind.config = {
@@ -52,7 +56,7 @@
         <a href="../index.html" class="pointer-events-auto">
             <img src="../resource/migslogo.png" alt="Logo" class="h-20 w-auto object-contain">
         </a>
-        <div class="flex gap-6 text-[10px] uppercase tracking-[0.4em] font-bold text-black/60 pointer-events-auto mt-4 bg-white/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/20">
+        <div class="flex gap-3 text-[10px] uppercase tracking-[0.4em] font-bold text-black/60 pointer-events-auto mt-4 bg-white/40 backdrop-blur-md px-6 py-3 rounded-full border border-white/20">
             <a href="../index.html" class="hover:text-black">Home</a>
             <a href="../projects.html" class="hover:text-black">Work</a>
             <a href="../team.html" class="hover:text-black">The Team</a>
