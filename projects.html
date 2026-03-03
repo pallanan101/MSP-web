@@ -27,6 +27,9 @@
     </script>
 
     <style>
+
+
+  @media (min-width: 768px) and (orientation: landscape) {
         body {
             color: #0f0e47;
             font-family: 'Poppins', sans-serif;
@@ -36,6 +39,7 @@
             background: white;
         }
 
+    }
         .font-garamond {
          font-family: "Cormorant Garamond", serif;
          font-optical-sizing: auto;
@@ -87,18 +91,26 @@
 
         /* MOBILE FIX: Adjust sidebar for Portrait screens */
         @media (max-width: 768px) and (orientation: portrait) {
+           
             .glass-sidebar {
+                background: rgba(255, 255, 255, 0.3) !important;
+            backdrop-filter: blur(1px) !important;
+            -webkit-backdrop-filter: blur(1px) !important;
                 width: 100% !important;
                 max-width: 100% !important;
-                height: 40%;
+               
                 position: absolute;
                 bottom: 0;
                 border-right: none;
                 border-top: 1px solid rgba(0,0,0,0.1);
             }
 
-            .project-info h2 {
+                .project-info h2 {
                 font-size: 8vw !important;
+            }
+            .project-info p {
+                font-size: 3vw !important;
+                max-width: 100% !important;
             }
         }
 
